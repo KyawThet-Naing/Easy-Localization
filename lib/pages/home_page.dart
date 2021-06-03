@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:localization/pages/language_page.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class Home extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Text('Welcome'),
+        child: Text(tr('welcome') + ' - ${context.locale.languageCode}'),
       ),
     );
   }

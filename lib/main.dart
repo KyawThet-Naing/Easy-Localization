@@ -2,8 +2,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
 
-void main() /*async*/ {
-  // await EasyLocalization.ensureInitialized();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   runApp(EasyLocalization(
       child: AppLocalization(),
       supportedLocales: [
